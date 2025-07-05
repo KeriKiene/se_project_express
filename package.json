@@ -8,14 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tripleten-com/se_project_express.git"
+    "url": "git+https://github.com/KeriKiene/se_project_express.git"
   },
   "license": "ISC",
   "author": "Keri Kiene",
   "type": "commonjs",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "npx eslint .",
+    "start": "node app.js"
   },
   "dependencies": {
     "express": "^5.1.0"
