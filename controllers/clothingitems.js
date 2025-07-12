@@ -27,7 +27,7 @@ const updateItem = (req, res) => {
 
   clothingItem
     .findByIdAndUpdate(itemId, { $set: { imageURL } })
-    .orFail()
+    .orFail(() => new Error("Item not found"))
     .then((item) => res.status(200).send(item))
     .catch((e) => {
       res.status(500).send({ message: "Error from updateItem", e });
